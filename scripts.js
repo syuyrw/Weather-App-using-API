@@ -9,14 +9,20 @@ let submit = document.getElementById("search-bttn");
 
 // Function to get latitude and longitude of city name entered
 function getLatLon() {
+    // Trim input, and ensure there is something other than spaces typed
+    const input = cityName.value.trim();
+
+    if (input === "") {
+        alert("Please enter a city name.");
+        return;
+    }
+
     const options = { method: "GET", headers: { accept: "application/json" } };
-    // Get weather API data
     fetch(
-        `https://geocoding-api.open-meteo.com/v1/search?name=${cityName.value.toLowerCase()}&count=10&language=en&format=json`,
+        `https://geocoding-api.open-meteo.com/v1/search?name=${input.toLowerCase()}&count=10&language=en&format=json`,
         options
     )
-   
-    // Parse data
+        // Parse data
         .then((response) => response.json())
         .then((data) => {
             if (data.results && data.results.length > 0) {
@@ -41,15 +47,14 @@ function getWeather() {
     )
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
+            // Set visuals like icon, temp, and condition
             setIcon(data);
-            console.log(condition);
             temperature.textContent = `The current temperature is: ${data.current.temperature_2m}`;
-            console.log(temperature);
             temperature.style.display = "block";
             document.getElementById("weather-section").style.display = "block";
             const name = cityName.value;
-            document.getElementById("show-city").textContent = name.charAt(0).toUpperCase() + name.slice(1);
+            document.getElementById("show-city").textContent =
+                name.charAt(0).toUpperCase() + name.slice(1);
             cityName.value = "";
         })
 
@@ -114,6 +119,7 @@ function setCondition(data) {
     typeCondition.style.display = "block";
 }
 
+// Add ability to press Enter to run search
 submit.addEventListener("click", getLatLon);
 cityName.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
