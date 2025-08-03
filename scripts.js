@@ -15,6 +15,7 @@ function getLatLon() {
         `https://geocoding-api.open-meteo.com/v1/search?name=${cityName.value.toLowerCase()}&count=10&language=en&format=json`,
         options
     )
+   
     // Parse data
         .then((response) => response.json())
         .then((data) => {

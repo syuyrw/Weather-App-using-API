@@ -1,20 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+
 body,
 html {
     display: flex;
     height: 100vh;
     justify-content: center; /* Centers horizontally */
     align-items: center;
+    background-color: #d7deea;
 }
 
 main {
     text-align: center;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+#search-section {
+    height: 150px;
+    width: 400px;
+    background-color: #0a121e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* This centers children horizontally */
+    border-radius: 25px;
+
+}
+
+h1 {
+    color: #ecf2f9;
+    font-weight: 1000;
+    margin: 0;
+}
+
+#search-row {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
 }
 
 #city-name {
-    width: 240px;
+    width: 280px;
     height: 40px;
     box-sizing: border-box;
     font-size: 18px;
+    border-radius: 10px;
+    border: none;
 }
 
 #search-bttn {
@@ -22,10 +54,27 @@ main {
     height: 40px;
     box-sizing: border-box;
     font-size: 18px;
+    border-radius: 10px;
+    background-color: #4f6992;
+    color: #ecf2f9;
+    border: none;
+    font-weight: bold;
+}
+
+#weather-section {
+    margin-top: 5px;
+    background-color: #889dbf;
+    border-radius: 25px;
+    width: 400px;
+    font-size: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 #show-city {
-    margin: 0;
+    color: #ecf2f9;
+    padding-top: 0px;
+    font-weight: 900;
 }
 
 #weather-icon {
@@ -34,20 +83,14 @@ main {
 }
 
 #weather-details {
+    color: #ecf2f9;
     text-align: center;
+    font-size: 18px;
+    font-weight: 1000;
 }
 
 #weather-icon {
     margin: auto;
     height: 200px;
     width: 200px;
-}
-
-#weather-section {
-    padding: 10px;
-    margin-top: 20px;
-    outline: 2px solid black;
-    height: 330px;
-    width: 300px;
-    font-size: 20px;
 }

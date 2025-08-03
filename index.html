@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Weather App</title>
-</head>
-<body>
-    <main>
-        <h1>Weather App</h1>
-        <div id="search-section">
-            <input type="text" id="city-name" placeholder="Type city name">
-            <button id="search-bttn">Search</button>
-        </div>
-        <div id="weather-section" style="display: none;">
-            <h2 id="show-city"></h2>
-            <img src="" id="weather-icon" style="display: none;">
-            <div id="weather-details">
-                <p id="temp" style="display: none;">The current temperature is: </p>
-                <p id="condition" style="display: none;">The current condition is: </p>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Weather App</title>
+    </head>
+    <body>
+        <main>
+            <div id="search-section">
+                <h1>Weather App</h1>
+                <div id="search-row">
+                    <input
+                        type="text"
+                        id="city-name"
+                        placeholder="Type city name"
+                    />
+                    <button id="search-bttn">Search</button>
+                </div>
             </div>
-        </div>
-    </main>
-    <script src="scripts.js"></script> 
-</body>
-
+            <div id="weather-section" style="display: none">
+                <h2 id="show-city"></h2>
+                <img src="" id="weather-icon" style="display: none" />
+                <div id="weather-details">
+                    <p id="temp" style="display: none">
+                        The current temperature is:
+                    </p>
+                    <p id="condition" style="display: none">
+                        The current condition is:
+                    </p>
+                </div>
+            </div>
+        </main>
+        <script src="scripts.js"></script>
+    </body>
 </html>
