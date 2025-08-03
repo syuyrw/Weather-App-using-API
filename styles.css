@@ -1,0 +1,53 @@
+body,
+html {
+    display: flex;
+    height: 100vh;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;
+}
+
+main {
+    text-align: center;
+}
+
+#city-name {
+    width: 240px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+#search-bttn {
+    width: 75px;
+    height: 40px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+#show-city {
+    margin: 0;
+}
+
+#weather-icon {
+    height: 100px;
+    width: 100px;
+}
+
+#weather-details {
+    text-align: center;
+}
+
+#weather-icon {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+}
+
+#weather-section {
+    padding: 10px;
+    margin-top: 20px;
+    outline: 2px solid black;
+    height: 330px;
+    width: 300px;
+    font-size: 20px;
+}
