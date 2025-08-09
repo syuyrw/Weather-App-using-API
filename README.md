@@ -22,4 +22,4 @@ This is a Javascript web app that allows users to search for a city name, and th
 
 ## Licenses
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](license.txt)
